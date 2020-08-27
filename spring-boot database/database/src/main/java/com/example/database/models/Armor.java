@@ -21,10 +21,10 @@ public class Armor {
   private String AC;
 
   @Column
-  private String Price;
+  private String price;
 
   @Column
-  private Text Description;
+  private Text description;
 
   public Armor() {}
 
@@ -53,18 +53,18 @@ public class Armor {
   }
 
   public String getPrice() {
-    return Price;
+    return price;
   }
 
   public void setPrice(String price) {
-    Price = price;
+    this.price = price;
   }
 
   public Text getDescription() {
-    return Description;
+    return description;
   }
 
   public void setDescription(Text description) {
-    Description = description;
+    this.description = description;
   }
 }
