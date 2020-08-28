@@ -1,0 +1,20 @@
+.buyingPage__cardContainer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.buyingPage__card{
+  width: 15rem;
+  margin: 1rem;
+}
+
+#cardMedia {
+  height: 20vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}

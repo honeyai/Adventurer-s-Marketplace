@@ -16,6 +16,7 @@ import SellersPage from "./SellersPage";
 import SellingArmor from "./SellingArmor";
 import SellingWeapons from "./SellingWeapons";
 import SellingPotions from "./SellingPotions";
+import BuyingPage from "./BuyingPage";
 
 const Navbar = () => {
   //Beyond MVP: add drop down menu on the sell link and buy link
@@ -40,6 +41,11 @@ const Navbar = () => {
                   Sell
                 </MDBNavLink>
               </MDBNavItem>
+              <MDBNavItem className="navbar__Link">
+                <MDBNavLink id="navbar__Link" to="/buying">
+                  Buy
+                </MDBNavLink>
+              </MDBNavItem>
             </MDBNavbarNav>
           </MDBContainer>
         </MDBNavbar>
@@ -47,6 +53,7 @@ const Navbar = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/selling" component={SellersPage} />
+        <Route path="/buying" component={BuyingPage} />
         <Route path="/armor" component={SellingArmor} />
         <Route path="/weapons" component={SellingWeapons} />
         <Route path="/potions" component={SellingPotions} />
