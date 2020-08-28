@@ -1,4 +1,7 @@
 package com.example.database.repositories;
 
-public class PotionsRepository {
+import com.example.database.models.Potions;
+import org.springframework.data.repository.CrudRepository;
+
+public interface PotionsRepository extends CrudRepository<Potions, Long> {
 }

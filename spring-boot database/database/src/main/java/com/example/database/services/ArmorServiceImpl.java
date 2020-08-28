@@ -18,12 +18,13 @@ public class ArmorServiceImpl implements ArmorService{
   }
 
   @Override
-  public Armor createArmorItem(Armor armorItem) {
-    return null;
+  public Armor createArmorItem(Armor newArmor) {
+    return armorRepository.save(newArmor);
   }
 
   @Override
   public HttpStatus deleteArmorItem(Long armorId) {
-    return null;
+    armorRepository.deleteById(armorId);
+    return HttpStatus.OK;
   }
 }

@@ -25,7 +25,7 @@ public class Potions {
   private String price;
 
   @Column
-  private Text description;
+  private String description;
 
   public Potions() {
   }
@@ -62,11 +62,11 @@ public class Potions {
     this.price = price;
   }
 
-  public Text getDescription() {
+  public String getDescription() {
     return description;
   }
 
-  public void setDescription(Text description) {
+  public void setDescription(String description) {
     this.description = description;
   }
 }

@@ -24,7 +24,7 @@ public class Armor {
   private String price;
 
   @Column
-  private Text description;
+  private String description;
 
   public Armor() {}
 
@@ -60,11 +60,11 @@ public class Armor {
     this.price = price;
   }
 
-  public Text getDescription() {
+  public String getDescription() {
     return description;
   }
 
-  public void setDescription(Text description) {
+  public void setDescription(String description) {
     this.description = description;
   }
 }
