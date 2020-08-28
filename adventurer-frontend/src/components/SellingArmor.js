@@ -18,7 +18,7 @@ const SellingArmor = () => {
   const handleSubmit = async event => {
     event.preventDefault();
     try{
-      const response = await axios.post('http://localhost:8080/armor', input);
+      const response = await axios.post('http://localhost:8080/armor/sellArmor', input);
 
       console.log(
         "this is what the response.data is: ",
