@@ -9,6 +9,8 @@ import {
 } from "mdbreact";
 import { Router, Switch } from "react-router";
 import './Styles/navbar';
+import Logo from "./Logo";
+import Home from "./Home";
 
 const Navbar = () => {
   return (
