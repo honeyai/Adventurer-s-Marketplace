@@ -7,12 +7,15 @@ import {
   MDBNavItem,
   MDBNavLink,
 } from "mdbreact";
-import { Router, Switch } from "react-router";
-import './Styles/navbar';
+import './Styles/navbar.css';
 import Logo from "./Logo";
 import Home from "./Home";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Switch, Link } from "react-router-dom";
+import SellersPage from "./SellersPage";
 
 const Navbar = () => {
+  //Beyond MVP: add drop down menu on the sell link and buy link
   return (
     <Router>
       <MDBContainer className="navbar__container navbar">
