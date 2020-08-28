@@ -23,8 +23,6 @@ const Navbar = () => {
   return (
     <Router>
       <MDBContainer className="navbar__container navbar">
-        <MDBNavbar className="navbar">
-          <MDBContainer className="navbar__container">
             <MDBNavbarBrand className="navbar__Brand">
               <Link to="/">
                 <Logo />
@@ -37,23 +35,21 @@ const Navbar = () => {
                 </MDBNavLink>
               </MDBNavItem>
               <MDBNavItem className="navbar__Link">
-                <MDBNavLink id="navbar__Link" to="/selling">
+                <MDBNavLink id="navbar__Link" to="/sell">
                   Sell
                 </MDBNavLink>
               </MDBNavItem>
               <MDBNavItem className="navbar__Link">
-                <MDBNavLink id="navbar__Link" to="/buying">
+                <MDBNavLink id="navbar__Link" to="/buy">
                   Buy
                 </MDBNavLink>
               </MDBNavItem>
             </MDBNavbarNav>
-          </MDBContainer>
-        </MDBNavbar>
       </MDBContainer>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/selling" component={SellersPage} />
-        <Route path="/buying" component={BuyingPage} />
+        <Route path="/sell" component={SellersPage} />
+        <Route path="/buy" component={BuyingPage} />
         <Route path="/armor" component={SellingArmor} />
         <Route path="/weapons" component={SellingWeapons} />
         <Route path="/potions" component={SellingPotions} />

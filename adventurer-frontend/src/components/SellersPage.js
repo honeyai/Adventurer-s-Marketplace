@@ -24,7 +24,7 @@ const SellersPage = () => {
             </CardContent>
           </Card>
         </Link>
-        <Link to="/weapons">
+        <Link to="/sell/weapons">
           <Card className="sellersPage__card">
             <CardMedia
               id="cardMedia"
@@ -38,7 +38,7 @@ const SellersPage = () => {
             </CardContent>
           </Card>
         </Link>
-        <Link to="/potions">
+        <Link to="/sell/potions">
           <Card className="sellersPage__card">
             <CardMedia
               id="cardMedia"
