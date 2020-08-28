@@ -13,6 +13,9 @@ import Home from "./Home";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch, Link } from "react-router-dom";
 import SellersPage from "./SellersPage";
+import SellingArmor from "./SellingArmor";
+import SellingWeapons from "./SellingWeapons";
+import SellingPotions from "./SellingPotions";
 
 const Navbar = () => {
   //Beyond MVP: add drop down menu on the sell link and buy link
@@ -44,6 +47,9 @@ const Navbar = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/selling" component={SellersPage} />
+        <Route path="/armor" component={SellingArmor} />
+        <Route path="/weapons" component={SellingWeapons} />
+        <Route path="/potions" component={SellingPotions} />
       </Switch>
     </Router>
   );
