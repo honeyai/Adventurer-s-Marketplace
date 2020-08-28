@@ -1,0 +1,44 @@
+.navbar__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 1rem;
+
+}
+
+.navbar {
+  background-color: inherit;
+}
+
+
+.navbar__Brand {
+  display: inline-block;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  margin-left: 2rem;
+}
+
+.navbar__LinkContainer {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-right: 1rem;
+}
+
+.navbar__Link {
+  margin-right: 2rem;
+}
+
+#navbar__Link {
+  color: #f7cd32;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+#navbar__Link:hover {
+  color: #be9e2a;
+}
