@@ -1,7 +1,6 @@
 import React from "react";
 import {
   MDBContainer,
-  MDBNavbar,
   MDBNavbarBrand,
   MDBNavbarNav,
   MDBNavItem,
@@ -51,8 +50,8 @@ const Navbar = () => {
         <Route path="/sell" component={SellersPage} />
         <Route path="/buy" component={BuyingPage} />
         <Route path="/armor" component={SellingArmor} />
-        <Route path="/weapons" component={SellingWeapons} />
-        <Route path="/potions" component={SellingPotions} />
+        <Route path="/sell/weapons" exact component={SellingWeapons} />
+        <Route path="/sell/potions" exact component={SellingPotions} />
       </Switch>
     </Router>
   );

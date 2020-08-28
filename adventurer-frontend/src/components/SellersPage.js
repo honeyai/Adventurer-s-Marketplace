@@ -5,6 +5,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import "./Styles/sellersPage.css";
 import { CardContent, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
+
 const SellersPage = () => {
   return (
     <div>
