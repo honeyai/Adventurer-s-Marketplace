@@ -80,10 +80,11 @@ const SellingArmor = () => {
           ? console.log("this is what items price is, ", items[0].price)
           : null}
         {items ? (
-          items.map((index) => {
+          items.map((index, key) => {
             console.log(index)
             return (
               <ItemsToDisplay
+                key={key}
                 name="sellingArmor__itemToSell"
                 nameOfItem={index.nameOfItem}
                 ac={index.ac}

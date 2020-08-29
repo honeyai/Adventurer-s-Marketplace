@@ -1,14 +1,18 @@
 import React from 'react';
-import { Card } from '@material-ui/core';
+import { Card, CardContent, Button } from '@material-ui/core';
 
 
-const ItemsToDisplay = ({name, nameOfItem, price, description, ac}) => {
+const ItemsToDisplay = ({key, name, nameOfItem, price, description, ac}) => {
   return (
-    <Card className={name}>
-      Item Name: {nameOfItem}
-      Item AC: {ac}
-      Item Price: {price}
-      Description: {description}
+    <Card key={key} className={name}>
+      <CardContent className={name}>
+        <ul>Item Name: {nameOfItem}</ul>
+        <ul>Item AC: {ac}</ul>
+        <ul>Item Price: {price}</ul>
+        <ul>Item Price: {price}</ul>
+        <ul>Description: {description}</ul>
+      </CardContent>
+      <Button> Delete from list </Button>
     </Card>
   );
 };
