@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import './Styles/sellingArmor.css'
+import "./Styles/sellingArmor.css";
+import ItemsToDisplay from "./ItemsToDisplay";
 // import { Card } from "@material-ui/core";
 
 const SellingArmor = () => {
@@ -34,12 +35,17 @@ const SellingArmor = () => {
 
   const getWares = async () => {
     try {
-      let response = await axios.get("http://localhost:8080/armor/list")
+      let response = await axios.get("http://localhost:8080/armor/list");
       console.log(response.data);
-    } catch(error) {
-      console.error("Error has occurred!", error.message)
+      setItems(response.data);
+    } catch (error) {
+      console.error("Error has occurred!", error.message);
     }
-  } 
+  };
+
+  useEffect(() => {
+    getWares();
+  }, []);
 
   return (
     <div className="sellingArmor__wrapper">
@@ -70,9 +76,25 @@ const SellingArmor = () => {
         </form>
       </div>
       <div className="sellingArmor__sellItems">
-        {
-          items ?  <div> Items will show </div> : <div> You aren't selling any wares yet! </div>
-        }
+        {items
+          ? console.log("this is what items price is, ", items[0].price)
+          : null}
+        {items ? (
+          items.map((index) => {
+            console.log(index)
+            return (
+              <ItemsToDisplay
+                name="sellingArmor__itemToSell"
+                nameOfItem={index.nameOfItem}
+                ac={index.ac}
+                price={index.price}
+                description={index.description}
+              />
+            );
+          })
+        ) : (
+          <div> You aren't selling any wares yet! </div>
+        )}
       </div>
     </div>
   );
