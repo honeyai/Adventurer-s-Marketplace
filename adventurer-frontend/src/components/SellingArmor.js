@@ -27,8 +27,10 @@ const SellingArmor = () => {
         "http://localhost:8080/armor/sellArmor",
         input
       );
-
-      console.log("this is what the response.data is: ", response.data);
+      let secResponse = await axios.get("http://localhost:8080/armor/list");
+      console.log(secResponse.data);
+      setItems(secResponse.data);
+      console.log("this is what the secResponse.data is: ", secResponse.data);
     } catch (error) {
       console.error(error.message);
     }
@@ -43,6 +45,14 @@ const SellingArmor = () => {
       console.error("Error has occurred!", error.message);
     }
   };
+
+  const removeWares = async () => {
+    try {
+      let response = await axios.delete("")
+    } catch {
+
+    }
+  }
 
   useEffect(() => {
     getWares();
@@ -83,7 +93,7 @@ const SellingArmor = () => {
           ? console.log("this is what items price is, ", items[0].price)
           : null}
         {items ? (
-          items.map((index, key) => {
+          items.reverse().map((index, key) => {
             console.log(index);
             return (
               <ItemsToDisplay
@@ -93,6 +103,7 @@ const SellingArmor = () => {
                 ac={index.ac}
                 price={index.price}
                 description={index.description}
+                func={removeWares()}
               />
             );
           })
