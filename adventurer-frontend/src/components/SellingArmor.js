@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Styles/sellingArmor.css";
 import ItemsToDisplay from "./ItemsToDisplay";
+import { Card } from "@material-ui/core";
 // import { Card } from "@material-ui/core";
 
 const SellingArmor = () => {
@@ -50,30 +51,32 @@ const SellingArmor = () => {
   return (
     <div className="sellingArmor__wrapper">
       <div className="sellingArmor__FormContainerPage">
-        <form
-          className="sellingArmor__Form"
-          onChange={(event) => handleChange(event)}
-          onSubmit={(event) => handleSubmit(event)}
-        >
-          <label>
-            Item Name:
-            <input type="text" id="nameOfItem"></input>
-          </label>
-          <label>
-            Item AC:
-            <input type="text" id="ac"></input>
-          </label>
-          <label>
-            Item Price:
-            <input type="text" id="price"></input>
-          </label>
-          <label>
-            Description:
-            <input type="text" id="description"></input>
-          </label>
+        <Card>
+          <form
+            className="sellingArmor__Form"
+            onChange={(event) => handleChange(event)}
+            onSubmit={(event) => handleSubmit(event)}
+          >
+            <label>
+              Item Name:
+              <input type="text" id="nameOfItem"></input>
+            </label>
+            <label>
+              Item AC:
+              <input type="text" id="ac"></input>
+            </label>
+            <label>
+              Item Price:
+              <input type="text" id="price"></input>
+            </label>
+            <label>
+              Description:
+              <input type="text" id="description"></input>
+            </label>
 
-          <input type="submit" />
-        </form>
+            <input type="submit" />
+          </form>
+        </Card>
       </div>
       <div className="sellingArmor__sellItems">
         {items
@@ -81,7 +84,7 @@ const SellingArmor = () => {
           : null}
         {items ? (
           items.map((index, key) => {
-            console.log(index)
+            console.log(index);
             return (
               <ItemsToDisplay
                 key={key}
