@@ -93,8 +93,9 @@ const SellingPotions = () => {
                 id="description"
               ></TextareaAutosize>
             </label>
-
-            <Button id="sellingPotions__Submit" type="submit">Submit</Button>
+            <Button id="sellingPotions__Submit" type="submit">
+              Submit
+            </Button>
           </form>
         </Card>
       </div>

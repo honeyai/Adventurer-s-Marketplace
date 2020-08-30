@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Styles/sellingArmor.css";
 import ItemsToDisplay from "./ItemsToDisplay";
-import { Card } from "@material-ui/core";
+import { Card, Button, TextareaAutosize } from "@material-ui/core";
 // import { Card } from "@material-ui/core";
 
 const SellingArmor = () => {
@@ -54,10 +54,10 @@ const SellingArmor = () => {
       let secResponse = await axios.get("http://localhost:8080/potions/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
-    } catch(error) {
+    } catch (error) {
       console.error(error.message);
     }
-  }
+  };
 
   useEffect(() => {
     getWares();
@@ -84,31 +84,40 @@ const SellingArmor = () => {
               Item Price:
               <input type="text" id="price"></input>
             </label>
-            <label>
+            <label className="sellingArmor__textAreaLabel">
               Description:
-              <input type="text" id="description"></input>
+              <TextareaAutosize
+                rowsMin="4"
+                className="sellingPotions__textArea"
+                type="text"
+                id="description"
+              ></TextareaAutosize>
             </label>
-
-            <input type="submit" />
+            <Button id="sellingArmor__Submit" type="submit">
+              Submit
+            </Button>
           </form>
         </Card>
       </div>
       <div className="sellingArmor__sellItems">
         {items ? (
-          items.slice(0).reverse().map((index, key) => {
-            return (
-              <ItemsToDisplay
-                key={key}
-                name="sellingArmor__itemToSell"
-                nameOfItem={index.nameOfItem}
-                itemID={index.id}
-                ac={index.ac}
-                price={index.price}
-                description={index.description}
-                func={() => removeWares(index.id)}
-              />
-            );
-          })
+          items
+            .slice(0)
+            .reverse()
+            .map((index, key) => {
+              return (
+                <ItemsToDisplay
+                  key={key}
+                  name="sellingArmor__itemToSell"
+                  nameOfItem={index.nameOfItem}
+                  itemID={index.id}
+                  ac={index.ac}
+                  price={index.price}
+                  description={index.description}
+                  func={() => removeWares(index.id)}
+                />
+              );
+            })
         ) : (
           <div> You aren't selling any wares yet! </div>
         )}

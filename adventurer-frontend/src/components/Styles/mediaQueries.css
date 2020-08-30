@@ -11,18 +11,6 @@
     }
 }
 
-/* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-    .sellingPotions__wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-}
-
 /* Landscape */
 @media only screen 
   and (min-device-width: 320px) 
@@ -42,18 +30,7 @@
     .sellingPotions__wrapper {
       display: flex;
       flex-direction: column;
-    }
-}
-
-/* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-    .sellingPotions__wrapper {
-      display: flex;
-      flex-direction: column;
+      height: 180vh;
     }
 }
 
@@ -76,18 +53,7 @@
     .sellingPotions__wrapper {
       display: flex;
       flex-direction: column;
-    }
-}
-
-/* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-    .sellingPotions__wrapper {
-      display: flex;
-      flex-direction: column;
+      height: 180vh;
     }
 }
 
@@ -97,7 +63,9 @@
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
-
+    .sellingPotions__wrapper {
+      height: 220vh;
+    }
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -110,20 +78,10 @@
     .sellingPotions__wrapper {
       display: flex;
       flex-direction: column;
+      height: 180vh;
     }
 }
 
-/* Portrait */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    .sellingPotions__wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-}
 
 /* Landscape */
 @media only screen 
@@ -131,7 +89,9 @@
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
-
+    .sellingPotions__wrapper {
+      height: 260vh;
+    }
 }
 
 /* ----------- iPhone X ----------- */
@@ -144,18 +104,8 @@
     .sellingPotions__wrapper {
       display: flex;
       flex-direction: column;
-    }
-}
+      height: 180vh;
 
-/* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    .sellingPotions__wrapper {
-      display: flex;
-      flex-direction: column;
     }
 }
 
@@ -165,5 +115,7 @@
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
-
+    .sellingPotions__wrapper {
+      height: 300vh;
+    }
 }

@@ -1,39 +1,65 @@
 .sellingWeapons__wrapper {
   border: solid blue;
   display: grid;
-  width: 100%;
-  height: 91vh;
-  grid-template-columns: repeat(1fr);
+  height: 90vh;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
   background-color: inherit;
 }
 
 .sellingWeapons__FormContainerPage {
   border: red solid;
   position: relative;
-  height: 100%;
+  display: flex;
+  align-items: center;
   grid-column: 1;
   grid-row: 1;
 }
 
+.sellingWeapons__FormCard {
+  display: flex;
+  margin: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
 .sellingWeapons__Form {
+  /* border: blue solid; */
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: center;
-  align-content: center;
+  align-items: flex-end;
   margin: 1rem;
 }
 
 .sellingWeapons__Form input {
   margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+#sellingWeapons__Submit {
+  margin-top: 1rem;
+}
+
+.sellingWeapons__textAreaLabel {
+  /* border: blue solid; */
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+.sellingWeapons__textArea {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .sellingWeapons__sellItems {
-  /* position: absolute; */
   border: red solid;
+  justify-content: center;
+  align-items: center;
   grid-column: 2;
   grid-row: 1;
-  height: 100%;
   overflow: scroll;
 }
 
@@ -42,4 +68,8 @@
   flex-flow: wrap column;
   justify-content: center;
   margin: 1rem;
+}
+
+.sellingWeapons__itemToSell li {
+  margin-bottom: 1rem;
 }
