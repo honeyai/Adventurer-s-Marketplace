@@ -50,7 +50,11 @@ const SellingWeapons = () => {
     try {
       console.log("this is id, ", id);
       console.log("I am clicked");
-      let response = await axios.delete(`http://localhost:8080/weapons/${id}`);
+      let response = await axios.delete(`http://localhost:8080/weapons/${id}`)
+      console.log("this is response.data,", response.data);
+      let secResponse = await axios.get("http://localhost:8080/weapons/list");
+      console.log(secResponse.data);
+      setItems(secResponse.data);
     } catch(error) {
       console.error(error.message);
     }
@@ -91,8 +95,10 @@ const SellingWeapons = () => {
         </Card>
       </div>
       <div className="sellingWeapons__sellItems">
+        {/* {items ? console.log("this should be id, ", items[0].id) : null} */}
         {items ? (
           items.slice(0).reverse().map((index, key) => {
+            // console.log("this should be index id, ", index.id)
             return (
               <ItemsToDisplay
                 key={key}
@@ -102,7 +108,7 @@ const SellingWeapons = () => {
                 ac={index.ac}
                 price={index.price}
                 description={index.description}
-                func={(event) => removeWares(event.target.id)}
+                func={() => removeWares(index.id)}
               />
             );
           })

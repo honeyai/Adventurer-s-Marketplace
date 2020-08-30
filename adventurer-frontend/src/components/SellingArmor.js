@@ -51,6 +51,9 @@ const SellingArmor = () => {
       console.log("this is id, ", id);
       console.log("I am clicked");
       let response = await axios.delete(`http://localhost:8080/armor/${id}`);
+      let secResponse = await axios.get("http://localhost:8080/potions/list");
+      console.log(secResponse.data);
+      setItems(secResponse.data);
     } catch(error) {
       console.error(error.message);
     }
@@ -63,7 +66,7 @@ const SellingArmor = () => {
   return (
     <div className="sellingArmor__wrapper">
       <div className="sellingArmor__FormContainerPage">
-        <Card>
+        <Card className="sellingArmor__FormCard">
           <form
             className="sellingArmor__Form"
             onChange={(event) => handleChange(event)}
@@ -102,7 +105,7 @@ const SellingArmor = () => {
                 ac={index.ac}
                 price={index.price}
                 description={index.description}
-                func={(event) => removeWares(event.target.id)}
+                func={() => removeWares(index.id)}
               />
             );
           })

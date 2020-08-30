@@ -10,7 +10,7 @@ const ItemsToDisplay = ({ name, nameOfItem, price, description, ac, itemID, func
         <ul>Item Price: {price}</ul>
         <ul>Description: {description}</ul>
       </CardContent>
-      <Button id={itemID} onClick={func}> Delete from list </Button>
+      <Button onClick={func}> Delete from list </Button>
     </Card>
   );
 };

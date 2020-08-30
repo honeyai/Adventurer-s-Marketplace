@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Styles/sellingPotions.css";
 import ItemsToDisplay from "./ItemsToDisplay";
-import { Card } from "@material-ui/core";
+import { Card, Button, TextareaAutosize } from "@material-ui/core";
 // import { Card } from "@material-ui/core";
 
 const SellingPotions = () => {
@@ -51,6 +51,9 @@ const SellingPotions = () => {
       console.log("this is id, ", id);
       console.log("I am clicked");
       let response = await axios.delete(`http://localhost:8080/potions/${id}`);
+      let secResponse = await axios.get("http://localhost:8080/potions/list");
+      console.log(secResponse.data);
+      setItems(secResponse.data);
     } catch(error) {
       console.error(error.message);
     }
@@ -63,7 +66,7 @@ const SellingPotions = () => {
   return (
     <div className="sellingPotions__wrapper">
       <div className="sellingPotions__FormContainerPage">
-        <Card>
+        <Card className="sellingPotions__FormCard">
           <form
             className="sellingPotions__Form"
             onChange={(event) => handleChange(event)}
@@ -81,12 +84,12 @@ const SellingPotions = () => {
               Item Price:
               <input type="text" id="price"></input>
             </label>
-            <label>
+            <label className="sellingPotions__textAreaLabel">
               Description:
-              <input type="text" id="description"></input>
+              <TextareaAutosize className="sellingPotions__textArea" type="text" id="description"></TextareaAutosize>
             </label>
 
-            <input type="submit" />
+            <Button type="submit" >Submit</Button>
           </form>
         </Card>
       </div>
@@ -102,7 +105,7 @@ const SellingPotions = () => {
                 ac={index.ac}
                 price={index.price}
                 description={index.description}
-                func={(event) => removeWares(event.target.id)}
+                func={() => removeWares(index.id)}
               />
             );
           })
