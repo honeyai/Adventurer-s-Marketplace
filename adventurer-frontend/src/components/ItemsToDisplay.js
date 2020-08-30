@@ -1,10 +1,10 @@
 import React from "react";
 import { Card, CardContent, Button } from "@material-ui/core";
 
-const ItemsToDisplay = ({ name, nameOfItem, price, description, ac, itemID, func }) => {
+const ItemsToDisplay = ({ name, nameOfItem, price, description, ac, func }) => {
   return (
     <Card className={name}>
-      <CardContent>
+      <CardContent >
         <ul>Item Name: {nameOfItem}</ul>
         <ul>Item AC: {ac}</ul>
         <ul>Item Price: {price}</ul>

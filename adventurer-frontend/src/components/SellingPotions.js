@@ -54,10 +54,10 @@ const SellingPotions = () => {
       let secResponse = await axios.get("http://localhost:8080/potions/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
-    } catch(error) {
+    } catch (error) {
       console.error(error.message);
     }
-  }
+  };
 
   useEffect(() => {
     getWares();
@@ -86,29 +86,37 @@ const SellingPotions = () => {
             </label>
             <label className="sellingPotions__textAreaLabel">
               Description:
-              <TextareaAutosize className="sellingPotions__textArea" type="text" id="description"></TextareaAutosize>
+              <TextareaAutosize
+                rowsMin="4"
+                className="sellingPotions__textArea"
+                type="text"
+                id="description"
+              ></TextareaAutosize>
             </label>
 
-            <Button type="submit" >Submit</Button>
+            <Button id="sellingPotions__Submit" type="submit">Submit</Button>
           </form>
         </Card>
       </div>
       <div className="sellingPotions__sellItems">
         {items ? (
-          items.slice(0).reverse().map((index, key) => {
-            return (
-              <ItemsToDisplay
-                key={key}
-                name="sellingPotions__itemToSell"
-                nameOfItem={index.nameOfItem}
-                itemID={index.id}
-                ac={index.ac}
-                price={index.price}
-                description={index.description}
-                func={() => removeWares(index.id)}
-              />
-            );
-          })
+          items
+            .slice(0)
+            .reverse()
+            .map((index, key) => {
+              return (
+                <ItemsToDisplay
+                  key={key}
+                  name="sellingPotions__itemToSell"
+                  nameOfItem={index.nameOfItem}
+                  itemID={index.id}
+                  ac={index.ac}
+                  price={index.price}
+                  description={index.description}
+                  func={() => removeWares(index.id)}
+                />
+              );
+            })
         ) : (
           <div> You aren't selling any wares yet! </div>
         )}
