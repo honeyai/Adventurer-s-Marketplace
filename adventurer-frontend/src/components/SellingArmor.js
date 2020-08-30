@@ -92,7 +92,7 @@ const SellingArmor = () => {
       </div>
       <div className="sellingArmor__sellItems">
         {items ? (
-          items.reverse().map((index, key) => {
+          items.slice(0).reverse().map((index, key) => {
             return (
               <ItemsToDisplay
                 key={key}
