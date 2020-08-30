@@ -1,0 +1,9 @@
+.buyingPotions__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.buyingPotions__DisplayCard {
+  margin: 1rem;
+  width: 40vw;
+}

@@ -9,8 +9,8 @@ const BuyingPage = () => {
   return (
     <div>
       <MDBTypography tag="h1">What are you buying</MDBTypography>
-      <div className="buyingPage__cardContainer">
-        <Link to="/buying/armor">
+      <div className="buyPage__cardContainer">
+        <Link to="/buyingArmor">
           <Card className="buyingPage__card">
             <CardMedia
               id="cardMedia"
@@ -24,7 +24,7 @@ const BuyingPage = () => {
             </CardContent>
           </Card>
         </Link>
-        <Link to="/buying/weapons">
+        <Link to="/buyWeapons">
           <Card className="buyingPage__card">
             <CardMedia
               id="cardMedia"
@@ -38,7 +38,7 @@ const BuyingPage = () => {
             </CardContent>
           </Card>
         </Link>
-        <Link to="/buying/potions">
+        <Link to="/buyPotions">
           <Card className="buyingPage__card">
             <CardMedia
               id="cardMedia"

@@ -16,6 +16,9 @@ import SellingArmor from "./SellingArmor";
 import SellingWeapons from "./SellingWeapons";
 import SellingPotions from "./SellingPotions";
 import BuyingPage from "./BuyingPage";
+import BuyingArmor from "./BuyingArmor"
+import BuyingWeapons from "./BuyingWeapons"
+import BuyingPotions from "./BuyingPotions"
 
 const Navbar = () => {
   //Beyond MVP: add drop down menu on the sell link and buy link
@@ -49,9 +52,12 @@ const Navbar = () => {
         <Route exact path="/" component={Home} />
         <Route path="/sell" component={SellersPage} />
         <Route path="/buy" component={BuyingPage} />
-        <Route path="/armor" component={SellingArmor} />
-        <Route path="/weapons" exact component={SellingWeapons} />
-        <Route path="/potions" exact component={SellingPotions} />
+        <Route path="/sellArmor" component={SellingArmor} />
+        <Route path="/sellWeapons" exact component={SellingWeapons} />
+        <Route path="/sellPotions" exact component={SellingPotions} />
+        <Route path="/buyArmor" component={BuyingArmor} />
+        <Route path="/buyWeapons" exact component={BuyingWeapons} />
+        <Route path="/buyPotions" exact component={BuyingPotions} />
       </Switch>
     </Router>
   );
