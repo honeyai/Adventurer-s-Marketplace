@@ -46,11 +46,13 @@ const SellingArmor = () => {
     }
   };
 
-  const removeWares = async () => {
+  const removeWares = async (id) => {
     try {
-      let response = await axios.delete("")
-    } catch {
-
+      console.log("this is id, ", id);
+      console.log("I am clicked");
+      let response = await axios.delete(`http://localhost:8080/armor/${id}`);
+    } catch(error) {
+      console.error(error.message);
     }
   }
 
@@ -89,21 +91,18 @@ const SellingArmor = () => {
         </Card>
       </div>
       <div className="sellingArmor__sellItems">
-        {items
-          ? console.log("this is what items price is, ", items[0].price)
-          : null}
         {items ? (
           items.reverse().map((index, key) => {
-            console.log(index);
             return (
               <ItemsToDisplay
                 key={key}
                 name="sellingArmor__itemToSell"
                 nameOfItem={index.nameOfItem}
+                itemID={index.id}
                 ac={index.ac}
                 price={index.price}
                 description={index.description}
-                func={removeWares()}
+                func={(event) => removeWares(event.target.id)}
               />
             );
           })
