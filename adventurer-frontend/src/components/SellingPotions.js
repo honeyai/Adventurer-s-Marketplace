@@ -3,7 +3,6 @@ import axios from "axios";
 import "./Styles/sellingPotions.css";
 import ItemsToDisplay from "./ItemsToDisplay";
 import { Card, Button, TextareaAutosize } from "@material-ui/core";
-// import { Card } from "@material-ui/core";
 
 const SellingPotions = () => {
   const [input, setInput] = useState({
@@ -13,7 +12,7 @@ const SellingPotions = () => {
     ac: "",
   });
 
-  const [items, setItems] = useState(null);
+  const [items, setItems] = useState([]);
 
   const handleChange = (event) => {
     const { value, id } = event.target;
@@ -100,7 +99,7 @@ const SellingPotions = () => {
         </Card>
       </div>
       <div className="sellingPotions__sellItems">
-        {items ? (
+        {items.length !== 0 ? (
           items
             .slice(0)
             .reverse()

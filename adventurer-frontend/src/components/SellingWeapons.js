@@ -13,7 +13,7 @@ const SellingWeapons = () => {
     ac: "",
   });
 
-  const [items, setItems] = useState(null);
+  const [items, setItems] = useState([]);
 
   const handleChange = (event) => {
     const { value, id } = event.target;
@@ -102,7 +102,7 @@ const SellingWeapons = () => {
       </div>
       <div className="sellingWeapons__sellItems">
         {/* {items ? console.log("this should be id, ", items[0].id) : null} */}
-        {items ? (
+        {items.length !== 0 ? (
           items
             .slice(0)
             .reverse()

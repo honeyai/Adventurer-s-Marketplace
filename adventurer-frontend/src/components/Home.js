@@ -1,12 +1,29 @@
-import React from 'react';
+import React from "react";
+import { Typography, Button } from "@material-ui/core";
+import "./Styles/home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div>
-      I'm empty atm... This is home
-      {/* //Hero full screen
-      //button Sell Wares
-      //button Buy Wares */}
+      <div
+        className="home__Hero"
+        style={{
+          backgroundImage: `linear-gradient(rgba(4, 0, 10, 0.5),rgba(0, 10, 0, 0.5)), url(${require("./Assets/Images/hero.jpg")})`,
+        }}
+      >
+        <div id="home__insideHero">
+          <Typography className="" gutterBottom variant="h1">
+            Welcome Adventurer, <br /> to the Marketplace
+          </Typography>
+          <div className="home__ButtonContainer">
+            <Link to="/sell">
+              <Button id="home__insideHeroButton"> selling </Button>
+            </Link>
+            <Button id="home__insideHeroButton"> buying </Button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

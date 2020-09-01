@@ -13,7 +13,7 @@ const SellingArmor = () => {
     ac: "",
   });
 
-  const [items, setItems] = useState(null);
+  const [items, setItems] = useState([]);
 
   const handleChange = (event) => {
     const { value, id } = event.target;
@@ -51,7 +51,7 @@ const SellingArmor = () => {
       console.log("this is id, ", id);
       console.log("I am clicked");
       let response = await axios.delete(`http://localhost:8080/armor/${id}`);
-      let secResponse = await axios.get("http://localhost:8080/potions/list");
+      let secResponse = await axios.get("http://localhost:8080/armor/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
     } catch (error) {
@@ -100,7 +100,7 @@ const SellingArmor = () => {
         </Card>
       </div>
       <div className="sellingArmor__sellItems">
-        {items ? (
+        {items.length !== 0 ? (
           items
             .slice(0)
             .reverse()

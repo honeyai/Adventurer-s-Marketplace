@@ -10,7 +10,7 @@ const BuyingPage = () => {
     <div>
       <MDBTypography tag="h1">What are you buying</MDBTypography>
       <div className="buyPage__cardContainer">
-        <Link to="/buyingArmor">
+        <Link to="/buyArmor">
           <Card className="buyingPage__card">
             <CardMedia
               id="cardMedia"

@@ -19,7 +19,7 @@ public class WeaponController {
     return weaponsService.listWeapons();
   }
 
-  @PostMapping("/sell/weapons")
+  @PostMapping("/sellWeapons")
   public Weapons createWeaponItem(@RequestBody Weapons newWeapons) {
     return weaponsService.createWeaponItem(newWeapons);
   }

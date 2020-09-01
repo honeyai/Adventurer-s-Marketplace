@@ -1,0 +1,36 @@
+.home__Hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.home__insideHero {
+  display: flex;
+  flex-direction: column;
+}
+
+.home__ButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+#home__insideHeroButton {
+  color: white;
+  font-size: xx-large;
+  background-color:rgba(4, 0, 0, 0.4);
+}
+
+#home__insideHeroButton:hover {
+  background-color:rgba(4, 0, 0);
+}
