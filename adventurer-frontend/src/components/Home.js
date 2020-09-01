@@ -20,7 +20,9 @@ const Home = () => {
             <Link to="/sell">
               <Button id="home__insideHeroButton"> selling </Button>
             </Link>
-            <Button id="home__insideHeroButton"> buying </Button>
+            <Link to="/buy">
+              <Button id="home__insideHeroButton"> buying </Button>
+            </Link>
           </div>
         </div>
       </div>

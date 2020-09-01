@@ -53,11 +53,11 @@ const Navbar = () => {
         <Route path="/sell" component={SellersPage} />
         <Route path="/buy" component={BuyingPage} />
         <Route path="/sellArmor" component={SellingArmor} />
-        <Route path="/sellWeapons" exact component={SellingWeapons} />
-        <Route path="/sellPotions" exact component={SellingPotions} />
+        <Route path="/sellWeapons" component={SellingWeapons} />
+        <Route path="/sellPotions" component={SellingPotions} />
         <Route path="/buyArmor" component={BuyingArmor} />
-        <Route path="/buyWeapons" exact component={BuyingWeapons} />
-        <Route path="/buyPotions" exact component={BuyingPotions} />
+        <Route path="/buyWeapons" component={BuyingWeapons} />
+        <Route path="/buyPotions" component={BuyingPotions} />
       </Switch>
     </Router>
   );
