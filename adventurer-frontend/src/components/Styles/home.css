@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 91vh;
   text-align: center;
   color: white;
   background-size: cover;
@@ -15,6 +15,10 @@
 .home__insideHero {
   display: flex;
   flex-direction: column;
+}
+
+.home__insideSecond{
+  margin: 1rem;
 }
 
 .home__ButtonContainer {
@@ -29,8 +33,10 @@
   color: white;
   font-size: xx-large;
   background-color:rgba(4, 0, 0, 0.4);
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #home__insideHeroButton:hover {
-  background-color:rgba(4, 0, 0);
+  background-color:rgba(4, 0, 0, 0.7);
 }

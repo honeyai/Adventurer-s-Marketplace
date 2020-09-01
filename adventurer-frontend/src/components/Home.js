@@ -13,16 +13,20 @@ const Home = () => {
         }}
       >
         <div id="home__insideHero">
-          <Typography className="" gutterBottom variant="h1">
-            Welcome Adventurer, <br /> to the Marketplace
+          <Typography gutterBottom variant="h1">
+            Welcome Adventurer <br /> to the Marketplace
           </Typography>
-          <div className="home__ButtonContainer">
-            <Link to="/sell">
-              <Button id="home__insideHeroButton"> selling </Button>
-            </Link>
-            <Link to="/buy">
-              <Button id="home__insideHeroButton"> buying </Button>
-            </Link>
+          <div className="home__insideSecond">
+            <Typography gutterBottom variant="h3"> are you </Typography>
+            <div className="home__ButtonContainer">
+              <Link to="/sell">
+                <Button id="home__insideHeroButton"> selling </Button>
+              </Link>
+              <Typography gutterBottom variant="h3"> or </Typography>
+              <Link to="/buy">
+                <Button id="home__insideHeroButton"> buying </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

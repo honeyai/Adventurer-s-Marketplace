@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
 
 }
 
@@ -37,7 +37,7 @@
   color: #f7cd32;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 #navbar__Link:hover {
