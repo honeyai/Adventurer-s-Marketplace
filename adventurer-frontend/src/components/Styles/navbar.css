@@ -1,14 +1,15 @@
-.navbar__container {
-  width: 100%;
+#navbar__container {
+  width: 100vw;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
+  box-shadow: none;
 }
 
 .navbar {
-  background-color: #CB5531;
+  background-color: #365946;
+  border: none;
 }
 
 
@@ -16,14 +17,14 @@
   display: inline-block;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .navbar__LinkContainer {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
 }
 
 .navbar__Link {
@@ -31,10 +32,10 @@
 }
 
 #navbar__Link {
-  color: #f7d7d7;
+  color: #D8D9D7;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
-  font-size: 2rem;
+  font-size: 150%;
 }
 
 #navbar__Link:hover {

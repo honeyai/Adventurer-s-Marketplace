@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 
 const SellersPage = () => {
   return (
-    <div>
-      <MDBTypography tag="h1">What are you selling</MDBTypography>
+    <div className="sellersPage__wrapper">
+      <Typography id="sellersPage__Text" variant="h3">What are you selling</Typography>
       <div className="sellersPage__cardContainer">
         <Link to="/sellArmor">
           <Card className="sellersPage__card">

@@ -13,8 +13,8 @@ const Home = () => {
         }}
       >
         <div id="home__insideHero">
-          <Typography gutterBottom variant="h1">
-            Welcome Adventurer <br /> to the Marketplace
+          <Typography id="home__WelcomeText" gutterBottom variant="h1">
+            Welcome Adventurer
           </Typography>
           <div id="home__insideSecond">
             <Typography gutterBottom variant="h3"> are you </Typography>

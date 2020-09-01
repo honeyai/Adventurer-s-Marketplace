@@ -66,27 +66,24 @@ const SellingArmor = () => {
   return (
     <div className="sellingArmor__wrapper">
       <div className="sellingArmor__FormContainerPage">
-        <Card className="sellingArmor__FormCard">
+        <Card id="sellingArmor__FormCard">
           <form
             className="sellingArmor__Form"
             onChange={(event) => handleChange(event)}
             onSubmit={(event) => handleSubmit(event)}
           >
             <label>
-              Item Name:
-              <input type="text" id="nameOfItem"></input>
+              <input placeHolder="Item Name" type="text" id="nameOfItem"></input>
             </label>
             <label>
-              Item AC:
-              <input type="text" id="ac"></input>
+              <input placeHolder="Armor Class" type="text" id="ac"></input>
             </label>
             <label>
-              Item Price:
-              <input type="text" id="price"></input>
+              <input placeHolder="$$" type="text" id="price"></input>
             </label>
             <label className="sellingArmor__textAreaLabel">
-              Description:
               <TextareaAutosize
+                placeHolder="This item is..."
                 rowsMin="4"
                 className="sellingPotions__textArea"
                 type="text"

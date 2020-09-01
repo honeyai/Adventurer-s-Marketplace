@@ -9,6 +9,14 @@
       display: flex;
       flex-direction: column;
     }
+    .sellingWeapons__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .sellingArmor__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
 }
 
 /* Landscape */
@@ -28,6 +36,16 @@
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
     .sellingPotions__wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 180vh;
+    }
+    .sellingWeapons__wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 180vh;
+    }
+    .sellingArmor__wrapper {
       display: flex;
       flex-direction: column;
       height: 180vh;
@@ -55,6 +73,16 @@
       flex-direction: column;
       height: 180vh;
     }
+    .sellingWeapons__wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 180vh;
+    }
+    .sellingArmor__wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 180vh;
+    }
 }
 
 /* Landscape */
@@ -64,6 +92,12 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
     .sellingPotions__wrapper {
+      height: 220vh;
+    }
+    .sellingWeapons__wrapper {
+      height: 220vh;
+    }
+    .sellingArmor__wrapper {
       height: 220vh;
     }
 }
@@ -80,6 +114,16 @@
       flex-direction: column;
       height: 180vh;
     }
+    .sellingWeapons__wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 180vh;
+    }
+    .sellingArmor__wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 180vh;
+    }
 }
 
 
@@ -90,6 +134,14 @@
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
     .sellingPotions__wrapper {
+      height: 260vh;
+    }
+
+    .sellingWeapons__wrapper {
+      height: 260vh;
+    }
+
+    .sellingArmor__wrapper {
       height: 260vh;
     }
 }
@@ -105,6 +157,16 @@
       display: flex;
       flex-direction: column;
       height: 180vh;
+    }
+    .sellingWeapons__wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 180vh;
+    }
+    .sellingArmor__wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 180vh;
 
     }
 }
@@ -116,6 +178,14 @@
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
     .sellingPotions__wrapper {
+      height: 300vh;
+    }
+
+    .sellingWeapons__wrapper {
+      height: 300vh;
+    }
+
+    .sellingArmor__wrapper {
       height: 300vh;
     }
 }

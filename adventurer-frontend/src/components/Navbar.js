@@ -24,7 +24,7 @@ const Navbar = () => {
   //Beyond MVP: add drop down menu on the sell link and buy link
   return (
     <Router>
-      <MDBContainer className="navbar__container navbar">
+      <MDBContainer id="navbar__container" className="navbar">
             <MDBNavbarBrand className="navbar__Brand">
               <Link to="/">
                 <Logo />

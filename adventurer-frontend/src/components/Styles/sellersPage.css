@@ -1,8 +1,21 @@
+.sellersPage__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sellersPage__Text {
+  margin: 1rem;
+  color: #f7d7d7;
+}
+
 .sellersPage__cardContainer {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
+  background-color: inherit;
 }
 
 .sellersPage__card{
