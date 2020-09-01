@@ -16,7 +16,7 @@ const Home = () => {
           <Typography gutterBottom variant="h1">
             Welcome Adventurer <br /> to the Marketplace
           </Typography>
-          <div className="home__insideSecond">
+          <div id="home__insideSecond">
             <Typography gutterBottom variant="h3"> are you </Typography>
             <div className="home__ButtonContainer">
               <Link to="/sell">

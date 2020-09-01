@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 91vh;
+  height: 87.5vh;
   text-align: center;
   color: white;
   background-size: cover;
@@ -12,26 +12,34 @@
   background-attachment: fixed;
 }
 
-.home__insideHero {
+#home__insideHero{
+  /* border: solid blue; */
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 5vh; */
 }
 
-.home__insideSecond{
-  margin: 1rem;
+#home__insideSecond{
+  /* border: rgb(255, 255, 255) solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .home__ButtonContainer {
+  /* border: rgb(231, 154, 10) solid; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 15rem;
-  margin-right: 15rem;
+  align-items: center;
+  width:100%;
 }
 
 #home__insideHeroButton {
   color: white;
-  font-size: xx-large;
   background-color:rgba(4, 0, 0, 0.4);
   margin-left: 1rem;
   margin-right: 1rem;

@@ -1,17 +1,14 @@
 .navbar__container {
-  /* position: fixed; */
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  /* padding-top: 1rem; */
-
 }
 
 .navbar {
-  background-color: inherit;
+  background-color: #CB5531;
 }
 
 
@@ -34,12 +31,12 @@
 }
 
 #navbar__Link {
-  color: #f7cd32;
+  color: #f7d7d7;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
 }
 
 #navbar__Link:hover {
-  color: #be9e2a;
+  color: #ffffff;
 }
