@@ -5,12 +5,31 @@ import ItemsToDisplay from "./ItemsToDisplay";
 import { Card, Button, TextareaAutosize } from "@material-ui/core";
 import NoWares from "./NoWares";
 
+import { makeStyles } from '@material-ui/core/styles';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
+
 const SellingPotions = () => {
+  const classes = useStyles();
+
   const [input, setInput] = useState({
     nameOfItem: "",
     description: "",
     price: "",
-    ac: "",
+    type: "",
   });
 
   const [items, setItems] = useState([]);
@@ -19,6 +38,10 @@ const SellingPotions = () => {
     const { value, id } = event.target;
     setInput({ ...input, [id]: value });
   };
+
+  const handleChangeForType = (event) => {
+    setInput({...input, type: event.target.value});
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -85,12 +108,20 @@ const SellingPotions = () => {
 
             <label>
               *
-              <input
-                placeholder="Armor Class"
-                required
-                type="text"
-                id="ac"
-              ></input>
+              {/* <input placeholder="Type" required type="text" id="ac"></input> */}
+              <FormControl className={classes.formControl}>
+                <InputLabel id="sellingWares__label">Type</InputLabel>
+                <Select
+                  labelId="sellingWares__label"
+                  id="sellingWares__select"
+                  value={input.type}
+                  onChange={handleChangeForType}
+                >
+                  <MenuItem value="Healing">Healing</MenuItem>
+                  <MenuItem value="Buff">Buff</MenuItem>
+                  <MenuItem value="Debuff">Debuff</MenuItem>
+                </Select>
+              </FormControl>
             </label>
             <label>
               *
@@ -126,7 +157,7 @@ const SellingPotions = () => {
                   name="sellingWares__itemToSell"
                   nameOfItem={index.nameOfItem}
                   itemID={index.id}
-                  ac={index.ac}
+                  type={index.type}
                   price={index.price}
                   description={index.description}
                   func={() => removeWares(index.id)}
@@ -135,8 +166,8 @@ const SellingPotions = () => {
             })
         ) : (
           <div className="noWares__Container">
-            <span>You aren't selling any wares</span> 
-            {<NoWares/>}
+            <span>You aren't selling any wares</span>
+            {<NoWares />}
           </div>
         )}
       </div>

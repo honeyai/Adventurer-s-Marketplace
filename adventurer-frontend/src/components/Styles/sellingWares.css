@@ -24,6 +24,12 @@
   background-color: #141b10;
 }
 
+#sellingWares__label {
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  color: #a2a69c;
+}
+
 .sellingWares__Form {
   border: goldenrod solid 1px;
   padding: 1rem;
@@ -51,6 +57,7 @@
 .sellingWares__Form input::placeholder {
   font-family: "Cinzel", serif;
   font-size: 1rem;
+  color: #a2a69c;
 }
 
 #sellingWares__Icon {
@@ -86,6 +93,7 @@
 #description::placeholder {
   font-family: "Cinzel", serif;
   font-size: 1rem;
+  color: #a2a69c;
 }
 
 #sellingWares__Submit {

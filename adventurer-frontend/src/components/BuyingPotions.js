@@ -34,7 +34,7 @@ const BuyingPotions = () => {
                 name="buyingWares__DisplayCard"
                 nameOfItem={index.nameOfItem}
                 price={index.price}
-                ac={index.ac}
+                type={index.type}
                 description={index.description}
               />
             );
