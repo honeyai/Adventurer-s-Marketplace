@@ -1,3 +1,22 @@
+.buyingPage__wrapper {
+  /* border: solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 87vh;
+}
+
+#buyingPage__text {
+  margin: 1rem;
+  color: #402B19;
+}
+
+#buyingPage__button {
+  margin:0;
+  padding:0;
+}
+
 .buyingPage__cardContainer {
   display: flex;
   flex-flow: row wrap;

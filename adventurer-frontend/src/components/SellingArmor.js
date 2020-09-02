@@ -66,24 +66,24 @@ const SellingArmor = () => {
   return (
     <div className="sellingArmor__wrapper">
       <div className="sellingArmor__FormContainerPage">
-        <Card id="sellingArmor__FormCard">
+        <Card id="sellingArmor__FormCard" className=".MuiTouchRipple-root">
           <form
             className="sellingArmor__Form"
             onChange={(event) => handleChange(event)}
             onSubmit={(event) => handleSubmit(event)}
           >
             <label>
-              <input placeHolder="Item Name" type="text" id="nameOfItem"></input>
+              <input placeholder="Item Name" type="text" id="nameOfItem"></input>
             </label>
             <label>
-              <input placeHolder="Armor Class" type="text" id="ac"></input>
+              <input placeholder="Armor Class" type="text" id="ac"></input>
             </label>
             <label>
-              <input placeHolder="$$" type="text" id="price"></input>
+              <input placeholder="$$" type="text" id="price"></input>
             </label>
             <label className="sellingArmor__textAreaLabel">
               <TextareaAutosize
-                placeHolder="This item is..."
+                placeholder="This item is..."
                 rowsMin="4"
                 className="sellingPotions__textArea"
                 type="text"

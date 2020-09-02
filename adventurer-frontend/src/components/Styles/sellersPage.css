@@ -1,13 +1,15 @@
 .sellersPage__wrapper {
+  /* border: solid; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  height: 87vh;
 }
 
 #sellersPage__Text {
   margin: 1rem;
-  color: #f7d7d7;
+  color: #402B19;
 }
 
 .sellersPage__cardContainer {
@@ -18,9 +20,17 @@
   background-color: inherit;
 }
 
-.sellersPage__card{
+#sellersPage__button {
+  margin: 0;
+  padding: 0;
+  text-transform: initial;
+}
+
+#sellersPage__card{
   width: 15rem;
   margin: 1rem;
+  color: #F2F2F0;
+  background-color: #A2A69C;
 }
 
 #cardMedia {
@@ -30,4 +40,14 @@
   background-position: center;
   background-repeat: no-repeat;
   object-fit: contain;
+  filter: grayscale(100%) blur(0.7px);
+  filter: sepia(0%) contrast(100%) saturate(0);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+#cardMedia:hover {
+  transform: scale(1.05); 
+  filter: grayscale(2%);
+  filter: sepia(45%) contrast(90%) saturate(2);
 }
