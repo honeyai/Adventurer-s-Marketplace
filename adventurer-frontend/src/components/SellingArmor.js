@@ -2,7 +2,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Styles/sellingArmor.css";
 import ItemsToDisplay from "./ItemsToDisplay";
-import { Card, Button, TextareaAutosize } from "@material-ui/core";
+import {
+  Card,
+  Button,
+  TextareaAutosize,
+  InputAdornment,
+  FilledInput,
+  InputLabel,
+  FormControl,
+} from "@material-ui/core";
 // import { Card } from "@material-ui/core";
 
 const SellingArmor = () => {
@@ -73,15 +81,35 @@ const SellingArmor = () => {
             onSubmit={(event) => handleSubmit(event)}
           >
             <label>
-              <input placeholder="Item Name" type="text" id="nameOfItem"></input>
+              *
+              <input
+                placeholder="Item Name"
+                required
+                type="text"
+                id="nameOfItem"
+              ></input>
             </label>
             <label>
-              <input placeholder="Armor Class" type="text" id="ac"></input>
+              *
+              <input
+                placeholder="Armor Class"
+                required
+                type="text"
+                id="ac"
+              ></input>
             </label>
             <label>
-              <input placeholder="$$" type="text" id="price"></input>
+              *
+              <span id="sellingArmor__Icon" >$
+              <input
+                required
+                type="text"
+                id="price"
+              ></input>
+              </span>
             </label>
-            <label className="sellingArmor__textAreaLabel">
+
+            <label>
               <TextareaAutosize
                 placeholder="This item is..."
                 rowsMin="4"
