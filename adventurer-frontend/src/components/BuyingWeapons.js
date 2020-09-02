@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import ItemsToBuy from './ItemsToBuy';
 import "./Styles/buyingWeapons.css";
+import NoWares from './NoWares';
 
 const BuyingWeapons = () => {
 
@@ -36,7 +37,10 @@ const BuyingWeapons = () => {
               />
             )
           }) : 
-          <div> Nothing here to buy </div>
+          // <div className="noWares__Container">
+            // <span>Nothing here to buy</span> 
+            <NoWares/>
+          // </div>
       }
     </div>
   );

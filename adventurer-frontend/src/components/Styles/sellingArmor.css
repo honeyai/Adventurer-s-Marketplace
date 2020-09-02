@@ -1,7 +1,7 @@
 .sellingArmor__wrapper {
   /* border: solid blue; */
   display: grid;
-  height: 90vh;
+  height: 87vh;
   grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
   background-color: inherit;
 }
@@ -13,7 +13,7 @@
   display: flex;
   grid-column: 1;
   grid-row: 1;
-  margin: 0 5rem;
+  /* margin: 0 5rem; */
 }
 
 #sellingArmor__FormCard {
@@ -80,6 +80,7 @@
   text-align: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.082);
+  color: #a2a69c;
 }
 
 #description::placeholder {
@@ -104,7 +105,7 @@
   grid-column: 2;
   grid-row: 1;
   overflow: scroll;
-  margin: 0 5rem;
+  /* margin: 0 5rem; */
 }
 
 .sellingArmor__itemToSell {
@@ -116,4 +117,25 @@
 
 .sellingArmor__itemToSell li {
   margin-bottom: 1rem;
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+}
+
+.noWares__Container {
+  /* border: solid; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.noWares__Container span {
+  /* border: solid; */
+  font-family: "Cinzel Decorative", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #732002;
 }

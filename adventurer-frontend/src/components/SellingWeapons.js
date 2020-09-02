@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Styles/sellingArmor.css";
 import ItemsToDisplay from "./ItemsToDisplay";
 import { Card, TextareaAutosize, Button } from "@material-ui/core";
+import NoWares from './NoWares';
 
 const SellingWeapons = () => {
   const [input, setInput] = useState({
@@ -133,7 +134,10 @@ const SellingWeapons = () => {
               );
             })
         ) : (
-          <div> You aren't selling any wares yet! </div>
+          <div className="noWares__Container">
+            <span>You aren't selling any wares</span> 
+            {<NoWares/>}
+          </div>
         )}
       </div>
     </div>
