@@ -2,21 +2,22 @@
   /* border: solid; */
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   height: 87vh;
-  color: #141B10;
+  color: #141b10;
 }
 
 #sellersPage__Text {
-  margin: 1rem;
-  color: #402B19;
+  margin: 3rem;
+  color: #402b19;
   text-transform: uppercase;
   font-size: 2rem;
-  font-family: 'Cinzel Decorative', cursive;}
+  font-family: "Cinzel Decorative", cursive;
+}
 
 #sellersPage__Option {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
 }
 
 .sellersPage__cardContainer {
@@ -33,11 +34,11 @@
   text-transform: initial;
 }
 
-#sellersPage__card{
+#sellersPage__card {
   width: 15rem;
   margin: 1rem;
-  color: #F2F2F0;
-  background-color: #A2A69C;
+  color: #f2f2f0;
+  background-color: #a2a69c;
 }
 
 #cardMedia {
@@ -54,7 +55,7 @@
 }
 
 #cardMedia:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
   filter: grayscale(2%);
   filter: sepia(45%) contrast(90%) saturate(2);
 }

@@ -5,7 +5,7 @@ import "./Styles/buyingPotions.css";
 
 const BuyingPotions = () => {
 
-  const [items, setItems] = useState(null);
+  const [items, setItems] = useState([]);
 
   const getPotions = async () => {
     try {
@@ -23,7 +23,7 @@ const BuyingPotions = () => {
   return (
     <div className="buyingPotions__wrapper">
       {
-        items ? 
+        items !== 0 ? 
           items.slice(0).reverse().map( (index, key) => {
             return (
               <ItemsToBuy

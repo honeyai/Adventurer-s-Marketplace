@@ -2,15 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Styles/sellingArmor.css";
 import ItemsToDisplay from "./ItemsToDisplay";
-import {
-  Card,
-  Button,
-  TextareaAutosize,
-  InputAdornment,
-  FilledInput,
-  InputLabel,
-  FormControl,
-} from "@material-ui/core";
+import { Card, Button, TextareaAutosize } from "@material-ui/core";
 // import { Card } from "@material-ui/core";
 
 const SellingArmor = () => {
@@ -74,7 +66,7 @@ const SellingArmor = () => {
   return (
     <div className="sellingArmor__wrapper">
       <div className="sellingArmor__FormContainerPage">
-        <Card id="sellingArmor__FormCard" className=".MuiTouchRipple-root">
+        <Card id="sellingArmor__FormCard">
           <form
             className="sellingArmor__Form"
             onChange={(event) => handleChange(event)}
@@ -89,6 +81,7 @@ const SellingArmor = () => {
                 id="nameOfItem"
               ></input>
             </label>
+
             <label>
               *
               <input
@@ -100,12 +93,8 @@ const SellingArmor = () => {
             </label>
             <label>
               *
-              <span id="sellingArmor__Icon" >$
-              <input
-                required
-                type="text"
-                id="price"
-              ></input>
+              <span id="sellingArmor__Icon">
+                $<input required type="text" id="price"></input>
               </span>
             </label>
 

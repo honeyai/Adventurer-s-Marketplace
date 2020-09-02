@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const BuyingPage = () => {
   return (
     <div className="buyingPage__wrapper">
-      <Typography id="sellersPage__Option" variant="h3" id="buyingPage__text">
+      <Typography variant="h3" id="buyingPage__text">
         What are you buying
       </Typography>
       <div className="buyingPage__cardContainer">

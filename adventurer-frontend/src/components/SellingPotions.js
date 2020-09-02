@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./Styles/sellingPotions.css";
+import "./Styles/sellingArmor.css";
 import ItemsToDisplay from "./ItemsToDisplay";
 import { Card, Button, TextareaAutosize } from "@material-ui/core";
 
@@ -63,42 +63,57 @@ const SellingPotions = () => {
   }, []);
 
   return (
-    <div className="sellingPotions__wrapper">
-      <div className="sellingPotions__FormContainerPage">
-        <Card className="sellingPotions__FormCard">
+    <div className="sellingArmor__wrapper">
+      <div className="sellingArmor__FormContainerPage">
+        <Card id="sellingArmor__FormCard">
           <form
-            className="sellingPotions__Form"
+            className="sellingArmor__Form"
             onChange={(event) => handleChange(event)}
             onSubmit={(event) => handleSubmit(event)}
           >
             <label>
-              Item Name:
-              <input type="text" id="nameOfItem"></input>
+              *
+              <input
+                className="active"
+                placeholder="Item Name"
+                required
+                type="text"
+                id="nameOfItem"
+              ></input>
+            </label>
+
+            <label>
+              *
+              <input
+                placeholder="Armor Class"
+                required
+                type="text"
+                id="ac"
+              ></input>
             </label>
             <label>
-              Item AC:
-              <input type="text" id="ac"></input>
+              *
+              <span id="sellingArmor__Icon">
+                $<input required type="text" id="price"></input>
+              </span>
             </label>
+
             <label>
-              Item Price:
-              <input type="text" id="price"></input>
-            </label>
-            <label className="sellingPotions__textAreaLabel">
-              Description:
               <TextareaAutosize
-                rowsMin="4"
+                placeholder="This item is..."
+                rowsMin="5"
                 className="sellingPotions__textArea"
                 type="text"
                 id="description"
               ></TextareaAutosize>
             </label>
-            <Button id="sellingPotions__Submit" type="submit">
+            <Button id="sellingArmor__Submit" type="submit">
               Submit
             </Button>
           </form>
         </Card>
       </div>
-      <div className="sellingPotions__sellItems">
+      <div className="sellingArmor__sellItems">
         {items.length !== 0 ? (
           items
             .slice(0)
@@ -107,7 +122,7 @@ const SellingPotions = () => {
               return (
                 <ItemsToDisplay
                   key={key}
-                  name="sellingPotions__itemToSell"
+                  name="sellingArmor__itemToSell"
                   nameOfItem={index.nameOfItem}
                   itemID={index.id}
                   ac={index.ac}

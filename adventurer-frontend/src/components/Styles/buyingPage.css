@@ -2,14 +2,15 @@
   /* border: solid; */
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   height: 87vh;
   color: #141b10;
 }
 
 #buyingPage__text {
-  margin: 1rem;
+  margin-top: 0;
+  margin: 3rem;
   color: #1f2919;
   text-transform: uppercase;
   font-size: 2rem;

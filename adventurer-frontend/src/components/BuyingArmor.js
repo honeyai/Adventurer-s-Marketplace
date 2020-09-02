@@ -5,7 +5,7 @@ import "./Styles/buyingArmor.css";
 
 const BuyingArmor = () => {
 
-  const [items, setItems] = useState(null);
+  const [items, setItems] = useState([]);
 
   const getArmor = async () => {
     try {
@@ -23,7 +23,7 @@ const BuyingArmor = () => {
   return (
     <div className="buyingArmor__wrapper">
       {
-        items ? 
+        items !== 0 ? 
           items.slice(0).reverse().map( (index, key) => {
             return (
               <ItemsToBuy
