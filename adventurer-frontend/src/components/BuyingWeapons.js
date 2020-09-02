@@ -4,7 +4,7 @@ import ItemsToBuy from "./ItemsToBuy";
 import "./Styles/buyingWares.css";
 import NoWares from "./NoWares";
 
-const buyingWeapons = () => {
+const BuyingWeapons = () => {
   const [items, setItems] = useState([]);
 
   const getWeapons = async () => {
@@ -48,4 +48,4 @@ const buyingWeapons = () => {
   );
 };
 
-export default buyingWeapons;
+export default BuyingWeapons;

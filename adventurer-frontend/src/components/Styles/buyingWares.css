@@ -1,8 +1,10 @@
 .buyingWares__wrapper {
+  /* border: solid; */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  height: 87vh;
 }
 
 .buyingWares__DisplayCard {
