@@ -8,14 +8,14 @@ import NoWares from './NoWares';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
+    margin: theme.spacing(1.5),
+    minWidth: "90%",
+    height: "50%",
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -110,16 +110,17 @@ const SellingWeapons = () => {
             <label>
               *
               <FormControl className={classes.formControl}>
-                <InputLabel id="sellingWares__label">Type</InputLabel>
+                <InputLabel 
+                id="sellingWares__label">Type</InputLabel>
                 <Select
                   labelId="sellingWares__label"
                   id="sellingWares__select"
                   value={input.type}
                   onChange={handleChangeForType}
                 >
-                  <MenuItem value="Healing">Healing</MenuItem>
-                  <MenuItem value="Buff">Buff</MenuItem>
-                  <MenuItem value="Debuff">Debuff</MenuItem>
+                  <MenuItem value="Ranged">Ranged</MenuItem>
+                  <MenuItem value="Two-Handed">Two-Handed</MenuItem>
+                  <MenuItem value="One-Handed">One-Handed</MenuItem>
                 </Select>
               </FormControl>
             </label>

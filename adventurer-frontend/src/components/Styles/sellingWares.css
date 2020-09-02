@@ -21,7 +21,7 @@
   margin: 1rem;
   justify-content: center;
   width: 100%;
-  background-color: #141b10;
+  background-color: #732002;
 }
 
 #sellingWares__label {
@@ -42,16 +42,21 @@
 .sellingWares__Form input {
   margin: 0 1rem;
   outline: none;
-  border-bottom: #a2a69c solid 1px;
+  border-bottom: #461c1594 solid 2px;
   border-top: none;
   border-left: none;
   border-right: none;
   background-color: transparent;
   width: 100%;
   height: 50%;
-  border-radius: 0.3rem;
-  color: #a2a69c;
+  /* border-radius: 0.3rem; */
+  /* color: #a2a69c; */
   font-size: 1rem;
+  transition: all 0.5s ease;
+}
+
+.sellingWares__Form input:hover {
+  border-bottom: black solid 2.5px;
 }
 
 .sellingWares__Form input::placeholder {
