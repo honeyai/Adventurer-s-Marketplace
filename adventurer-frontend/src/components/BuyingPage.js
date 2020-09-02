@@ -7,20 +7,20 @@ import { Link } from "react-router-dom";
 const BuyingPage = () => {
   return (
     <div className="buyingPage__wrapper">
-      <Typography variant="h3" id="buyingPage__text">
+      <Typography id="sellersPage__Option" variant="h3" id="buyingPage__text">
         What are you buying
       </Typography>
       <div className="buyingPage__cardContainer">
         <Link to="/buyArmor">
           <Button id="buyingPage__button">
-            <Card className="buyingPage__card">
+            <Card id="buyingPage__card">
               <CardMedia
                 id="cardMedia"
                 image={require("./Assets/Images/armor.jpg")}
                 title="Armor"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography id="sellersPage__Option" gutterBottom variant="h5" component="h2">
                   Armor
                 </Typography>
               </CardContent>
@@ -29,14 +29,14 @@ const BuyingPage = () => {
         </Link>
         <Link to="/buyWeapons">
           <Button id="buyingPage__button">
-            <Card className="buyingPage__card">
+            <Card id="buyingPage__card">
               <CardMedia
                 id="cardMedia"
                 image={require("./Assets/Images/weapons.jpg")}
                 title="Weapons"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography id="sellersPage__Option" gutterBottom variant="h5" component="h2">
                   Weapons
                 </Typography>
               </CardContent>
@@ -45,14 +45,14 @@ const BuyingPage = () => {
         </Link>
         <Link to="/buyPotions">
           <Button id="buyingPage__button">
-            <Card className="buyingPage__card">
+            <Card id="buyingPage__card">
               <CardMedia
                 id="cardMedia"
                 image={require("./Assets/Images/potions.jpg")}
                 title="Potions"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography id="sellersPage__Option" gutterBottom variant="h5" component="h2">
                   Potions
                 </Typography>
               </CardContent>

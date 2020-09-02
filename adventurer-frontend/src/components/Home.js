@@ -17,12 +17,12 @@ const Home = () => {
             Welcome Adventurer
           </Typography>
           <div id="home__insideSecond">
-            <Typography gutterBottom variant="h3"> are you </Typography>
+            <Typography id="home__insideHero" gutterBottom variant="h3"> are you </Typography>
             <div className="home__ButtonContainer">
               <Link to="/sell">
                 <Button id="home__insideHeroButton"> selling </Button>
               </Link>
-              <Typography gutterBottom variant="h3"> or </Typography>
+              <Typography id="home__insideHero" gutterBottom variant="h3"> or </Typography>
               <Link to="/buy">
                 <Button id="home__insideHeroButton"> buying </Button>
               </Link>

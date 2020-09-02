@@ -21,7 +21,7 @@
   padding: 1rem;
   justify-content: center;
   width: 100%;
-  background-color: #392E18;
+  background-color: #141B10;
 }
 
 .sellingArmor__Form {
@@ -37,13 +37,12 @@
   margin: 1rem;
   margin-bottom: 2rem;
   outline: none;
-  border-bottom: #FF7E57 solid 1px;
+  border-bottom: #A2A69C solid 1px;
   border-top: none;
   border-left: none;
   border-right: none;
   width: 100%;
   background-color: transparent;
-  color: #EBE2C3;
 }
 
 #description {
@@ -51,23 +50,17 @@
   border-radius: 0.3rem;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
+  
 }
 
 #sellingArmor__Submit {
   margin-top: 1rem;
+  color: #D8D9D7;
 }
 
-.sellingArmor__textAreaLabel {
-  /* border: blue solid; */
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  margin-top: 1rem;
-}
-
-.sellingArmor__textArea {
-  margin-left: 1rem;
-  margin-right: 1rem;
+#sellingArmor__Submit:hover {
+  color: #b9b9b8;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .sellingArmor__sellItems {

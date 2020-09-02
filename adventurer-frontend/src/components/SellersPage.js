@@ -14,14 +14,19 @@ const SellersPage = () => {
       <div className="sellersPage__cardContainer">
         <Link to="/sellArmor">
           <Button id="sellersPage__button">
-            <Card id="sellersPage__card" className="cardMedia">
+            <Card id="sellersPage__card">
               <CardMedia
                 id="cardMedia"
                 image={require("./Assets/Images/armor.jpg")}
                 title="Armor"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography
+                  id="sellersPage__Option"
+                  gutterBottom
+                  variant="h5"
+                  component="h2"
+                >
                   Armor
                 </Typography>
               </CardContent>
@@ -29,32 +34,46 @@ const SellersPage = () => {
           </Button>
         </Link>
         <Link to="/sellWeapons">
-          <Card id="sellersPage__card">
-            <CardMedia
-              id="cardMedia"
-              image={require("./Assets/Images/weapons.jpg")}
-              title="Weapons"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Weapons
-              </Typography>
-            </CardContent>
-          </Card>
+          <Button id="sellersPage__button">
+            <Card id="sellersPage__card">
+              <CardMedia
+                id="cardMedia"
+                image={require("./Assets/Images/weapons.jpg")}
+                title="Weapons"
+              />
+              <CardContent>
+                <Typography
+                  id="sellersPage__Option"
+                  gutterBottom
+                  variant="h5"
+                  component="h2"
+                >
+                  Weapons
+                </Typography>
+              </CardContent>
+            </Card>
+          </Button>
         </Link>
         <Link to="/sellPotions">
-          <Card id="sellersPage__card">
-            <CardMedia
-              id="cardMedia"
-              image={require("./Assets/Images/potions.jpg")}
-              title="Potions"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Potions
-              </Typography>
-            </CardContent>
-          </Card>
+          <Button id="sellersPage__button">
+            <Card id="sellersPage__card">
+              <CardMedia
+                id="cardMedia"
+                image={require("./Assets/Images/potions.jpg")}
+                title="Potions"
+              />
+              <CardContent>
+                <Typography
+                  id="sellersPage__Option"
+                  gutterBottom
+                  variant="h5"
+                  component="h2"
+                >
+                  Potions
+                </Typography>
+              </CardContent>
+            </Card>
+          </Button>
         </Link>
       </div>
     </div>

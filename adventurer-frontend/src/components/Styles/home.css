@@ -18,10 +18,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Cinzel', serif;
 }
 
 #home__WelcomeText {
   font-size: 10vh;
+  font-family: 'Cinzel', serif;
 }
 
 .home__ButtonContainer {
@@ -39,6 +41,8 @@
   margin-left: 1rem;
   margin-right: 1rem;
   font-size: 4vh;
+  font-family: 'Cinzel', serif;
+
 }
 
 #home__insideHeroButton:hover {

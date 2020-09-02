@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: flex-start;
   box-shadow: none;
+  font-family: 'Cinzel', serif;
 }
 
 .navbar {
@@ -34,7 +35,8 @@
 #navbar__Link {
   color: #D8D9D7;
   text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-family: 'Cinzel', serif;
   font-size: 150%;
 }
 
