@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import ItemsToBuy from './ItemsToBuy';
-import "./Styles/buyingPotions.css";
+import "./Styles/buyingWares.css";
+import NoWares from "./NoWares";
 
 const BuyingPotions = () => {
 
@@ -21,23 +22,29 @@ const BuyingPotions = () => {
   }, []);
 
   return (
-    <div className="buyingPotions__wrapper">
-      {
-        items !== 0 ? 
-          items.slice(0).reverse().map( (index, key) => {
+    <div className="buyingWares__wrapper">
+      {items.length !== 0 ? (
+        items
+          .slice(0)
+          .reverse()
+          .map((index, key) => {
             return (
               <ItemsToBuy
                 key={key}
-                name="buyingPotions__DisplayCard"
+                name="buyingWares__DisplayCard"
                 nameOfItem={index.nameOfItem}
                 price={index.price}
                 ac={index.ac}
                 description={index.description}
               />
-            )
-          }) : 
-          <div> Nothing here to buy </div>
-      }
+            );
+          })
+      ) : (
+        <div className="noWares__BuyingContainer">
+          <span>There's nothing here to buy</span>
+          {<NoWares />}
+        </div>
+      )}
     </div>
   );
 };

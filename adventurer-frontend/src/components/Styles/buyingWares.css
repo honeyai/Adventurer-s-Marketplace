@@ -1,0 +1,30 @@
+.buyingWares__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.buyingWares__DisplayCard {
+  margin: 1rem;
+  width: 40vw;
+}
+
+.noWares__BuyingContainer {
+  /* border: solid; */
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.noWares__BuyingContainer span {
+  /* border: solid; */
+  font-family: "Cinzel Decorative", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #732002;
+}

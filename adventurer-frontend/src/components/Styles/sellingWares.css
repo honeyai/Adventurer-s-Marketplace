@@ -1,4 +1,4 @@
-.sellingArmor__wrapper {
+.sellingWares__wrapper {
   /* border: solid blue; */
   display: grid;
   height: 87vh;
@@ -6,7 +6,7 @@
   background-color: inherit;
 }
 
-.sellingArmor__FormContainerPage {
+.sellingWares__FormContainerPage {
   /* border: red solid; */
   /* margin: 2rem; */
   position: relative;
@@ -16,7 +16,7 @@
   /* margin: 0 5rem; */
 }
 
-#sellingArmor__FormCard {
+#sellingWares__FormCard {
   display: flex;
   margin: 1rem;
   justify-content: center;
@@ -24,7 +24,7 @@
   background-color: #141b10;
 }
 
-.sellingArmor__Form {
+.sellingWares__Form {
   border: goldenrod solid 1px;
   padding: 1rem;
   display: flex;
@@ -33,7 +33,7 @@
   width: 100%;
 }
 
-.sellingArmor__Form input {
+.sellingWares__Form input {
   margin: 0 1rem;
   outline: none;
   border-bottom: #a2a69c solid 1px;
@@ -48,12 +48,12 @@
   font-size: 1rem;
 }
 
-.sellingArmor__Form input::placeholder {
+.sellingWares__Form input::placeholder {
   font-family: "Cinzel", serif;
   font-size: 1rem;
 }
 
-#sellingArmor__Icon {
+#sellingWares__Icon {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -64,7 +64,7 @@
   height: 50%;
 }
 
-.sellingArmor__Form label {
+.sellingWares__Form label {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -88,17 +88,17 @@
   font-size: 1rem;
 }
 
-#sellingArmor__Submit {
+#sellingWares__Submit {
   margin-top: 0 1rem;
   color: #d8d9d7;
 }
 
-#sellingArmor__Submit:hover {
+#sellingWares__Submit:hover {
   color: #b9b9b8;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.sellingArmor__sellItems {
+.sellingWares__sellItems {
   /* border: red solid; */
   justify-content: center;
   align-items: center;
@@ -108,14 +108,14 @@
   /* margin: 0 5rem; */
 }
 
-.sellingArmor__itemToSell {
+.sellingWares__itemToSell {
   display: flex;
   flex-flow: wrap column;
   justify-content: center;
   margin: 1rem;
 }
 
-.sellingArmor__itemToSell li {
+.sellingWares__itemToSell li {
   margin-bottom: 1rem;
   font-family: "Cinzel", serif;
   font-size: 1rem;

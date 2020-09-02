@@ -1,9 +1,0 @@
-.buyingWeapons__wrapper {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.buyingWeapons__DisplayCard {
-  margin: 1rem;
-  width: 40vw;
-}

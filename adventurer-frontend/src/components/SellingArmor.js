@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./Styles/sellingArmor.css";
+import "./Styles/sellingWares.css";
 import ItemsToDisplay from "./ItemsToDisplay";
 import { Card, Button, TextareaAutosize } from "@material-ui/core";
 import NoWares from "./NoWares";
@@ -64,11 +64,11 @@ const SellingArmor = () => {
   }, []);
 
   return (
-    <div className="sellingArmor__wrapper">
-      <div className="sellingArmor__FormContainerPage">
-        <Card id="sellingArmor__FormCard">
+    <div className="sellingWares__wrapper">
+      <div className="sellingWares__FormContainerPage">
+        <Card id="sellingWares__FormCard">
           <form
-            className="sellingArmor__Form"
+            className="sellingWares__Form"
             onChange={(event) => handleChange(event)}
             onSubmit={(event) => handleSubmit(event)}
           >
@@ -93,7 +93,7 @@ const SellingArmor = () => {
             </label>
             <label>
               *
-              <span id="sellingArmor__Icon">
+              <span id="sellingWares__Icon">
                 $<input required type="text" id="price"></input>
               </span>
             </label>
@@ -107,13 +107,13 @@ const SellingArmor = () => {
                 id="description"
               ></TextareaAutosize>
             </label>
-            <Button id="sellingArmor__Submit" type="submit">
+            <Button id="sellingWares__Submit" type="submit">
               Submit
             </Button>
           </form>
         </Card>
       </div>
-      <div className="sellingArmor__sellItems">
+      <div className="sellingWares__sellItems">
         {items.length !== 0 ? (
           items
             .slice(0)
@@ -122,7 +122,7 @@ const SellingArmor = () => {
               return (
                 <ItemsToDisplay
                   key={key}
-                  name="sellingArmor__itemToSell"
+                  name="sellingWares__itemToSell"
                   nameOfItem={index.nameOfItem}
                   itemID={index.id}
                   ac={index.ac}
