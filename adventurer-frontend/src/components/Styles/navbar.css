@@ -9,7 +9,7 @@
 }
 
 .navbar {
-  background-color: #365946;
+  background-color: var(--navBar-color);
   border: none;
 }
 
@@ -33,7 +33,7 @@
 }
 
 #navbar__Link {
-  color: #D8D9D7;
+  color: var(--links-color);
   text-decoration: none;
   text-transform: uppercase;
   font-family: 'Cinzel', serif;
@@ -42,4 +42,17 @@
 
 #navbar__Link:hover {
   color: #ffffff;
+}
+
+.navbar__Link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.5px;
+  background: #FFFEF2;
+  transition: width .3s;
+}
+
+.navbar__Link:hover::after {
+  width: 100%
 }

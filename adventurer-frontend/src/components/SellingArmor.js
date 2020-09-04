@@ -23,10 +23,7 @@ const SellingArmor = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:8080/armor/sellArmor",
-        input
-      );
+      await axios.post("http://localhost:8080/armor/sellArmor", input);
       let secResponse = await axios.get("http://localhost:8080/armor/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
@@ -50,7 +47,7 @@ const SellingArmor = () => {
     try {
       console.log("this is id, ", id);
       console.log("I am clicked");
-      let response = await axios.delete(`http://localhost:8080/armor/${id}`);
+      await axios.delete(`http://localhost:8080/armor/${id}`);
       let secResponse = await axios.get("http://localhost:8080/armor/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
@@ -134,8 +131,8 @@ const SellingArmor = () => {
             })
         ) : (
           <div className="noWares__Container">
-            <span>You aren't selling any wares</span> 
-            {<NoWares/>}
+            <span>You aren't selling any wares</span>
+            {<NoWares />}
           </div>
         )}
       </div>

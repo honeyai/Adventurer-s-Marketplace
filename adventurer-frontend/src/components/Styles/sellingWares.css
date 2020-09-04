@@ -21,17 +21,16 @@
   margin: 1rem;
   justify-content: center;
   width: 100%;
-  background-color: #732002;
+  background-color: var(--card-color);
 }
 
 #sellingWares__label {
   font-family: "Cinzel", serif;
   font-size: 1rem;
-  color: #a2a69c;
 }
 
 .sellingWares__Form {
-  border: goldenrod solid 1px;
+  border: var(--card-border) solid 1px;
   padding: 1rem;
   display: flex;
   flex-flow: column wrap;
@@ -42,7 +41,7 @@
 .sellingWares__Form input {
   margin: 0 1rem;
   outline: none;
-  border-bottom: #461c1594 solid 2px;
+  border-bottom: var(--card-input-bottomLine) solid 2px;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -62,7 +61,7 @@
 .sellingWares__Form input::placeholder {
   font-family: "Cinzel", serif;
   font-size: 1rem;
-  color: #a2a69c;
+  color: var(--card-placeholder);
 }
 
 #sellingWares__Icon {
@@ -70,7 +69,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
-  color: #f2f2f0;
+  color: var(--card-dollarSign);
   margin-left: 1rem;
   width: 100%;
   height: 50%;
@@ -92,18 +91,18 @@
   text-align: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.082);
-  color: #a2a69c;
 }
 
 #description::placeholder {
   font-family: "Cinzel", serif;
   font-size: 1rem;
-  color: #a2a69c;
+  color: var(--card-placeholder);
 }
 
 #sellingWares__Submit {
   margin-top: 0 1rem;
   color: #d8d9d7;
+  background-color: #66bfbf;
 }
 
 #sellingWares__Submit:hover {
@@ -126,12 +125,14 @@
   flex-flow: wrap column;
   justify-content: center;
   margin: 1rem;
+  background-color: var(--items-background);
 }
 
-.sellingWares__itemToSell li {
+.sellingWares__itemToSell ul {
   margin-bottom: 1rem;
   font-family: "Cinzel", serif;
   font-size: 1rem;
+  color: var(--font-color);
 }
 
 .noWares__Container {
@@ -150,5 +151,5 @@
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
-  color: #732002;
+  color: #ea5455;
 }

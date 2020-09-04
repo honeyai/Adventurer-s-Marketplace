@@ -10,7 +10,7 @@
 
 #sellersPage__Text {
   margin: 3rem;
-  color: #402b19;
+  color: #ea5455;
   text-transform: uppercase;
   font-size: 2rem;
   font-family: "Cinzel Decorative", cursive;
@@ -37,8 +37,8 @@
 #sellersPage__card {
   width: 15rem;
   margin: 1rem;
-  color: #f2f2f0;
-  background-color: #a2a69c;
+  color: #ea5455;
+  background-color: #e5e5e5;
 }
 
 #cardMedia {

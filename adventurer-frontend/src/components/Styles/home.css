@@ -40,7 +40,7 @@
 
 #home__insideHeroButton {
   color: white;
-  background-color:rgba(4, 0, 0, 0.4);
+  background-color:#04000066;
   margin-left: 1rem;
   margin-right: 1rem;
   font-size: 4vh;
@@ -49,5 +49,5 @@
 }
 
 #home__insideHeroButton:hover {
-  background-color:rgba(4, 0, 0, 0.7);
+  background-color:rgba(234, 84, 85, 0.5);
 }

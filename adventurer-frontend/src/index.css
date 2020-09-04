@@ -1,4 +1,18 @@
+:root {
+  --navBar-color: #ff4b5c;
+  --links-color: #e0ece4;
+  --card-color: #e0ece4;
+  --card-border: #056674;
+  --card-input-bottomLine: #66bfbf;
+  --card-placeholder: #66bfbf;
+  --card-dollarSign: #ff4b5c;
+  --noWares-text: #056674;
+  --submit-button: #66bfbf;
+  --font-color: #66bfbf;
+  --items-background: #e0ece4;
+}
+
 body {
   margin: 0;
-  background-color: #F2F2F0;
+  background-color: #ffffff;
 }

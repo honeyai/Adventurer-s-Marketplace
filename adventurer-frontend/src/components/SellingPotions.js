@@ -5,11 +5,11 @@ import ItemsToDisplay from "./ItemsToDisplay";
 import { Card, Button, TextareaAutosize } from "@material-ui/core";
 import NoWares from "./NoWares";
 
-import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+import { makeStyles } from "@material-ui/core/styles";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -39,16 +39,13 @@ const SellingPotions = () => {
   };
 
   const handleChangeForType = (event) => {
-    setInput({...input, type: event.target.value});
-  }
+    setInput({ ...input, type: event.target.value });
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:8080/potions/sellPotions",
-        input
-      );
+      await axios.post("http://localhost:8080/potions/sellPotions", input);
       let secResponse = await axios.get("http://localhost:8080/potions/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
@@ -70,9 +67,7 @@ const SellingPotions = () => {
 
   const removeWares = async (id) => {
     try {
-      console.log("this is id, ", id);
-      console.log("I am clicked");
-      let response = await axios.delete(`http://localhost:8080/potions/${id}`);
+      await axios.delete(`http://localhost:8080/potions/${id}`);
       let secResponse = await axios.get("http://localhost:8080/potions/list");
       console.log(secResponse.data);
       setItems(secResponse.data);

@@ -3,13 +3,13 @@ import axios from "axios";
 import "./Styles/sellingWares.css";
 import ItemsToDisplay from "./ItemsToDisplay";
 import { Card, TextareaAutosize, Button } from "@material-ui/core";
-import NoWares from './NoWares';
+import NoWares from "./NoWares";
 
-import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+import { makeStyles } from "@material-ui/core/styles";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -40,16 +40,13 @@ const SellingWeapons = () => {
   };
 
   const handleChangeForType = (event) => {
-    setInput({...input, type: event.target.value});
-  }
+    setInput({ ...input, type: event.target.value });
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:8080/weapons/sellWeapons",
-        input
-      );
+      await axios.post("http://localhost:8080/weapons/sellWeapons", input);
       let secResponse = await axios.get("http://localhost:8080/weapons/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
@@ -110,8 +107,7 @@ const SellingWeapons = () => {
             <label>
               *
               <FormControl className={classes.formControl}>
-                <InputLabel 
-                id="sellingWares__label">Type</InputLabel>
+                <InputLabel id="sellingWares__label">Type</InputLabel>
                 <Select
                   labelId="sellingWares__label"
                   id="sellingWares__select"
