@@ -120,7 +120,7 @@
   /* margin: 0 5rem; */
 }
 
-.sellingWares__itemToSell {
+#sellingWares__itemToSell {
   display: flex;
   flex-flow: wrap column;
   justify-content: center;
@@ -128,11 +128,16 @@
   background-color: var(--items-background);
 }
 
-.sellingWares__itemToSell ul {
+#sellingWares__itemToSell ul {
   margin-bottom: 1rem;
   font-family: "Cinzel", serif;
   font-size: 1rem;
   color: var(--font-color);
+}
+
+#sellingWares__itemToSell__Button {
+  background-color: var(--submit-button);
+  color: var(--links-color);
 }
 
 .noWares__Container {

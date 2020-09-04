@@ -3,7 +3,7 @@ import { Card, CardContent, Button } from "@material-ui/core";
 
 const ItemsToDisplay = ({ name, nameOfItem, price, description, ac, type, func }) => {
   return (
-    <Card className={name}>
+    <Card id={name}>
       <CardContent>
         <ul>Item Name: {nameOfItem}</ul>
         <ul>Item Price: ${price}</ul>
@@ -13,7 +13,7 @@ const ItemsToDisplay = ({ name, nameOfItem, price, description, ac, type, func }
         }
         <ul>Description: {description}</ul>
       </CardContent>
-      <Button onClick={func}> Delete from list </Button>
+      <Button id={name + "__Button"} onClick={func}> Delete from list </Button>
     </Card>
   );
 };
