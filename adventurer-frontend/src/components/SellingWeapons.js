@@ -46,8 +46,8 @@ const SellingWeapons = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:8080/weapons/sellWeapons", input);
-      let secResponse = await axios.get("http://localhost:8080/weapons/list");
+      await axios.post("https://shrouded-castle-33166.herokuapp.com/weapons/sellWeapons", input);
+      let secResponse = await axios.get("https://shrouded-castle-33166.herokuapp.com/weapons/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
       console.log("this is what the secResponse.data is: ", secResponse.data);
@@ -58,7 +58,7 @@ const SellingWeapons = () => {
 
   const getWares = async () => {
     try {
-      let response = await axios.get("http://localhost:8080/weapons/list");
+      let response = await axios.get("https://shrouded-castle-33166.herokuapp.com/weapons/list");
       console.log(response.data);
       setItems(response.data);
     } catch (error) {
@@ -70,9 +70,9 @@ const SellingWeapons = () => {
     try {
       console.log("this is id, ", id);
       console.log("I am clicked");
-      let response = await axios.delete(`http://localhost:8080/weapons/${id}`);
+      let response = await axios.delete(`https://shrouded-castle-33166.herokuapp.com/weapons/${id}`);
       console.log("this is response.data,", response.data);
-      let secResponse = await axios.get("http://localhost:8080/weapons/list");
+      let secResponse = await axios.get("https://shrouded-castle-33166.herokuapp.com/weapons/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
     } catch (error) {
