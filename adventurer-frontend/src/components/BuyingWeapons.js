@@ -9,7 +9,7 @@ const BuyingWeapons = () => {
 
   const getWeapons = async () => {
     try {
-      let response = await Axios.get("http://localhost:8080/weapons/list");
+      let response = await Axios.get("/weapons/list");
       setItems(response.data);
     } catch (error) {
       console.error("OOPS!,", error.message);

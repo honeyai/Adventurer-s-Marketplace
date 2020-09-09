@@ -10,7 +10,7 @@ const BuyingArmor = () => {
 
   const getArmor = async () => {
     try {
-      let response = await Axios.get("http://localhost:8080/armor/list");
+      let response = await Axios.get("/armor/list");
       setItems(response.data);
     } catch (error) {
       console.error("OOPS!,", error.message);

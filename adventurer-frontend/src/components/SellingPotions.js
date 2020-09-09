@@ -45,8 +45,8 @@ const SellingPotions = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("https://shrouded-castle-33166.herokuapp.com/potions/sellPotions", input);
-      let secResponse = await axios.get("https://shrouded-castle-33166.herokuapp.com/potions/list");
+      await axios.post("/potions/sellPotions", input);
+      let secResponse = await axios.get("/potions/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
       console.log("this is what the secResponse.data is: ", secResponse.data);
@@ -57,7 +57,7 @@ const SellingPotions = () => {
 
   const getWares = async () => {
     try {
-      let response = await axios.get("https://shrouded-castle-33166.herokuapp.com/potions/list");
+      let response = await axios.get("/potions/list");
       console.log(response.data);
       setItems(response.data);
     } catch (error) {
@@ -67,8 +67,8 @@ const SellingPotions = () => {
 
   const removeWares = async (id) => {
     try {
-      await axios.delete(`https://shrouded-castle-33166.herokuapp.com/potions/${id}`);
-      let secResponse = await axios.get("https://shrouded-castle-33166.herokuapp.com/potions/list");
+      await axios.delete(`/potions/${id}`);
+      let secResponse = await axios.get("/potions/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
     } catch (error) {

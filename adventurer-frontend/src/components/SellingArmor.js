@@ -23,8 +23,8 @@ const SellingArmor = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://shrouded-castle-33166.herokuapp.com//armor/sellArmor", input);
-      let secResponse = await axios.get("http://shrouded-castle-33166.herokuapp.com//armor/list");
+      await axios.post("/armor/sellArmor", input);
+      let secResponse = await axios.get("/armor/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
       console.log("this is what the secResponse.data is: ", secResponse.data);
@@ -35,7 +35,7 @@ const SellingArmor = () => {
 
   const getWares = async () => {
     try {
-      let response = await axios.get("http://shrouded-castle-33166.herokuapp.com//armor/list");
+      let response = await axios.get("/armor/list");
       console.log(response.data);
       setItems(response.data);
     } catch (error) {
@@ -47,8 +47,8 @@ const SellingArmor = () => {
     try {
       console.log("this is id, ", id);
       console.log("I am clicked");
-      await axios.delete(`http://shrouded-castle-33166.herokuapp.com//armor/${id}`);
-      let secResponse = await axios.get("http://shrouded-castle-33166.herokuapp.com//armor/list");
+      await axios.delete(`/armor/${id}`);
+      let secResponse = await axios.get("/armor/list");
       console.log(secResponse.data);
       setItems(secResponse.data);
     } catch (error) {

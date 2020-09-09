@@ -2,6 +2,7 @@
   "name": "adventurer-frontend",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://shrouded-castle-33166.herokuapp.com/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
