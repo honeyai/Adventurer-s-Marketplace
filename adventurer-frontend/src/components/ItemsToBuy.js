@@ -3,7 +3,7 @@ import { Card, CardContent, Button } from "@material-ui/core";
 
 const ItemsToBuy = ({ name, nameOfItem, price, ac, type, description, func }) => {
   return (
-    <Card className={name}>
+    <Card id={name}>
       <CardContent>
         <ul>Product Name: {nameOfItem}</ul>
         <ul>Price: ${price}</ul>
@@ -13,7 +13,7 @@ const ItemsToBuy = ({ name, nameOfItem, price, ac, type, description, func }) =>
         }
         <ul>Description: {description}</ul>
       </CardContent>
-      <Button onClick={func}> BUY </Button>
+      <Button id={name + "__Button"} onClick={func}> BUY </Button>
     </Card>
   );
 };
