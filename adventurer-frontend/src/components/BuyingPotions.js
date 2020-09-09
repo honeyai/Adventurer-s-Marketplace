@@ -3,6 +3,7 @@ import Axios from 'axios';
 import ItemsToBuy from './ItemsToBuy';
 import "./Styles/buyingWares.css";
 import NoWares from "./NoWares";
+import { route } from "./proxy/route";
 
 const BuyingPotions = () => {
 
@@ -10,7 +11,7 @@ const BuyingPotions = () => {
 
   const getPotions = async () => {
     try {
-      let response = await Axios.get("http://localhost:8080/potions/list");
+      let response = await Axios.get(`${route}potions/list`);
       setItems(response.data);
     } catch (error) {
       console.error("OOPS!,", error.message);

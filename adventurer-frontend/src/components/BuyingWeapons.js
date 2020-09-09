@@ -3,13 +3,14 @@ import Axios from "axios";
 import ItemsToBuy from "./ItemsToBuy";
 import "./Styles/buyingWares.css";
 import NoWares from "./NoWares";
+import {route} from "./proxy/route";
 
 const BuyingWeapons = () => {
   const [items, setItems] = useState([]);
 
   const getWeapons = async () => {
     try {
-      let response = await Axios.get("http://localhost:8080/weapons/list");
+      let response = await Axios.get(`${route}weapons/list`);
       setItems(response.data);
     } catch (error) {
       console.error("OOPS!,", error.message);

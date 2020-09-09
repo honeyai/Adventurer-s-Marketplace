@@ -4,6 +4,7 @@ import "./Styles/sellingWares.css";
 import ItemsToDisplay from "./ItemsToDisplay";
 import { Card, TextareaAutosize, Button } from "@material-ui/core";
 import NoWares from "./NoWares";
+import {route} from "./proxy/route";
 
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -46,8 +47,8 @@ const SellingWeapons = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("https://shrouded-castle-33166.herokuapp.com/weapons/sellWeapons", input);
-      let secResponse = await axios.get("https://shrouded-castle-33166.herokuapp.com/weapons/list");
+      await axios.post(`${route}weapons/sellWeapons`, input);
+      let secResponse = await axios.get(`${route}weapons/list`);
       console.log(secResponse.data);
       setItems(secResponse.data);
       console.log("this is what the secResponse.data is: ", secResponse.data);
@@ -58,7 +59,7 @@ const SellingWeapons = () => {
 
   const getWares = async () => {
     try {
-      let response = await axios.get("https://shrouded-castle-33166.herokuapp.com/weapons/list");
+      let response = await axios.get(`${route}weapons/list`);
       console.log(response.data);
       setItems(response.data);
     } catch (error) {
@@ -70,9 +71,9 @@ const SellingWeapons = () => {
     try {
       console.log("this is id, ", id);
       console.log("I am clicked");
-      let response = await axios.delete(`https://shrouded-castle-33166.herokuapp.com/weapons/${id}`);
+      let response = await axios.delete(`${route}weapons/${id}`);
       console.log("this is response.data,", response.data);
-      let secResponse = await axios.get("https://shrouded-castle-33166.herokuapp.com/weapons/list");
+      let secResponse = await axios.get(`${route}weapons/list`);
       console.log(secResponse.data);
       setItems(secResponse.data);
     } catch (error) {
